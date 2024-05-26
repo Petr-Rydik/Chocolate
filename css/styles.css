@@ -294,6 +294,7 @@ body {
 .reviews-list {
   display: flex;
   column-gap: 28px;
+  margin-bottom: 50px;
 }
 .reviews-list-item {
   border: 1px solid rgba(17, 17, 17, 0.1);
@@ -316,6 +317,13 @@ body {
   color: rgba(17, 17, 17, 0.7);
 }
 .leave-review-btn {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #fd9222;
+  border-radius: 100px;
+  padding: 14px 40px;
+  min-width: 222px;
+  height: 50px;
   font-weight: 600;
   font-size: 18px;
 }
@@ -325,6 +333,9 @@ body {
   color: #ffffff;
 }
 /*===== FOOTER STYLE===== */
+.page-footer {
+  padding-top: 50px;
+}
 .page-footer-title {
   font-weight: 500;
   font-size: 28px;
