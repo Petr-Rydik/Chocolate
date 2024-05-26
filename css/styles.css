@@ -1,7 +1,20 @@
-/*===== Сброс общих стилей ===== */
+/*===== Сброс дефолтных стилей ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 ul,
 ol {
   list-style-type: none; /*подчёркивание ссылок*/
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 a {
   text-decoration: none; /*убирает подчёркивание*/
@@ -10,10 +23,19 @@ a {
 button {
   cursor: pointer; /*при наведении стрелка в руку*/
 }
+img {
+  display: block;
+}
+/*===== ОБЩЕЕ ДЛЯ СТРАНИЦЫ ===== */
 body {
   font-family: "Montserrat", sans-serif;
   color: #111111;
   background-color: #fafafa;
+}
+.container {
+  max-width: 1168px;
+  padding: 0 16px;
+  margin: 0 auto;
 }
 .accent-color {
   color: #fd9222;
@@ -25,18 +47,48 @@ body {
   letter-spacing: -0.03em;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.section-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /*===== HEADER STYLES ===== */
+.page-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .page-logo {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
   letter-spacing: -0.03em;
 }
+.menu {
+  display: flex;
+  column-gap: 24px;
+}
 .text-italic {
   font-style: italic;
 }
 .menu-link {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -47,17 +99,42 @@ body {
   color: #fd9222;
 }
 /*===== HERO STYLES ===== */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #1e1823;
+  border-radius: 30px;
+}
+.hero-container {
+  padding-top: 381px;
+  padding-bottom: 40px;
+  padding-left: 56px;
+  padding-right: 56px;
+  color: #ffffff;
+}
 .main-title {
   font-weight: 500;
   font-size: 28px;
   line-height: 1.21;
   letter-spacing: -0.03em;
+  max-width: 484px;
+  margin-bottom: 32px;
+}
+.hero-content-wrapper {
+  display: flex;
+  align-items: center;
 }
 .buy-now-btn {
+  min-width: 144px;
+  height: 45px;
+  border-radius: 100px;
+  border: none;
+  padding: 14px 40px;
   font-weight: 600;
   font-size: 14px;
   background-color: #fd9222;
   color: #ffffff;
+  margin-right: 14px;
 }
 .buy-now-btn:hover,
 .buy-now-btn:focus {
@@ -65,39 +142,125 @@ body {
   color: #fd9222;
 }
 .how-made-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  padding: 14px 40px;
+  min-width: 183px;
+  height: 45px;
   font-weight: 600;
   font-size: 14px;
 }
 .how-made-link:hover,
 .how-made-link:focus {
   color: #fd9222;
+  background-color: #ffffff;
 }
 .scroll-down-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.03em;
+  margin-left: auto;
 }
 .scroll-down-link:hover,
 .scroll-down-link:focus {
   color: #fd9222;
 }
 /*===== BENEFITS STYLES ===== */
+.benefits {
+  max-width: 1200px;
+  margin-top: 72px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  background-color: #1e1823;
+}
+.benefits-list {
+  display: flex;
+  gap: 70px;
+}
+.benefits-list-item {
+  width: calc((100% - 140px) / 3);
+}
 .benefits-list-title {
   font-weight: 600;
   font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 18px;
 }
 .benefits-list-text {
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.7);
 }
 /*===== INGREDIENTS STYLES ===== */
+.ingrediens {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.ingrediens-section-title {
+  text-align: center;
+  margin-bottom: 28px;
+}
 .ingredients-description {
+  width: 468px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
   text-align: center;
+  margin-bottom: 50px;
+}
+.ingredients-list {
+  display: flex;
+  column-gap: 19px;
+}
+.ingredients-list-item {
+  width: calc((100% - 57px) / 4);
+}
+.one-item {
+  border-radius: 15px;
+  width: 270px;
+  height: 270px;
+  background-color: #fd9222;
+  padding: 28px 32px 82px;
+}
+.one-img,
+.two-img,
+.three-img,
+.four-img {
+  margin-bottom: 36px;
+}
+.one-title,
+.three-title {
+  color: #ffffff;
+}
+.two-item {
+  border: 1px solid #fd9222;
+  border-radius: 15px;
+  width: 270px;
+  height: 270px;
+  background-color: #ffffff;
+  padding: 28px 36px 82px 28px;
+}
+.three-item {
+  border-radius: 15px;
+  width: 270px;
+  height: 270px;
+  background-color: #1e1823;
+  padding: 28px 36px 82px 28px;
+}
+.four-item {
+  border: 1px solid #fd9222;
+  border-radius: 15px;
+  width: 270px;
+  height: 270px;
+  padding: 28px 36px 82px 28px;
 }
 .ingredients-list-title {
   font-weight: 600;
@@ -118,6 +281,17 @@ body {
   letter-spacing: -0.02em;
 }
 /*===== REVIEWS STYLE===== */
+.reviews-list {
+  display: flex;
+  column-gap: 28px;
+}
+.reviews-list-item {
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
+  background: #ffffff;
+  width: calc((100% - 56px) / 3);
+}
 .reviews-list-fullname {
   font-weight: 600;
   font-size: 18px;
