@@ -230,17 +230,8 @@ body {
   background-color: #fd9222;
   padding: 28px 32px 82px;
 }
-.one-img,
-.two-img,
-.three-img,
-.four-img {
-  margin-bottom: 36px;
-}
-.one-title,
-.three-title {
-  color: #ffffff;
-}
-.two-item {
+.two-item,
+.four-item {
   border: 1px solid #fd9222;
   border-radius: 15px;
   width: 270px;
@@ -255,12 +246,15 @@ body {
   background-color: #1e1823;
   padding: 28px 36px 82px 28px;
 }
-.four-item {
-  border: 1px solid #fd9222;
-  border-radius: 15px;
-  width: 270px;
-  height: 270px;
-  padding: 28px 36px 82px 28px;
+.one-img,
+.two-img,
+.three-img,
+.four-img {
+  margin-bottom: 36px;
+}
+.one-title,
+.three-title {
+  color: #ffffff;
 }
 .ingredients-list-title {
   font-weight: 600;
@@ -270,15 +264,31 @@ body {
   text-transform: uppercase;
 }
 /*===== HOW IT’S MADE STYLE===== */
+.how-made-content-wrapper {
+  display: flex;
+  column-gap: 20px;
+}
+.how-made-text-wrapper {
+  padding: 32px;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
 .how-made-title {
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
+  margin-bottom: 28px;
+}
+.how-made-list {
+  padding-right: 26px;
 }
 .how-made-list-item {
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+}
+.how-made-list-item:not(:last-child) {
+  margin-bottom: 24px;
 }
 /*===== REVIEWS STYLE===== */
 .reviews-list {
