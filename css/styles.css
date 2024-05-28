@@ -73,6 +73,8 @@ body {
   align-items: center;
 }
 .page-logo {
+  display: flex;
+  align-items: center;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
@@ -97,6 +99,12 @@ body {
 .menu-link:hover,
 .menu-link:focus {
   color: #fd9222;
+}
+.header-social-items {
+  display: flex;
+}
+.logo-icon {
+  margin-left: 4px;
 }
 /*===== HERO STYLES ===== */
 .hero {
